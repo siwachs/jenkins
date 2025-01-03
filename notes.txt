@@ -1,0 +1,45 @@
+The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+ie it is a automation platform aloow to build, test and deploy software using pipelines.
+
+It can be use to automate any tasks like run Bash and Python scripts. It provide a web GUI where we can create tasks for manage source control, build triggers etc.
+
+
+
+Jenkins Infrastructure
+We have master server which control Pipelines, Schedules Builds to Agents
+
+And then we Agents that perform build in their workspace.
+
+Example:
+1) Push a commit to GitHub
+2) Jenkins master aware of this commit and trigger approprite pipeline
+3) And distributes the build to one of Agent to Run. It select Agent based on Configured Labels
+
+Agent Types
+1) Permanent Agent
+Dedicated Servers for Running Jobs (Nedd Java and SSH connection as Master server make connections over SSH)
+
+2) Cloud Agents
+Ephemeral/Dynamic Agents spin up on demand
+Example: Docker, Kubernetes and AWS fleet manager
+
+
+
+Build Types
+1) Freestyle Build
+Simplest method to create a build
+Feels like Shell Scripting that run on a server triggered b specefic events (like commit on GitHub)
+
+2) Pipelines
+Use Jenkins files written Groovy Syntax to specif what happens during the build
+Use stages (Ex: Clone, Build, Test, Package, Deploy) to break down components of build
+
+ie Jenkins is tool to automate work, tasks or deployment.
+
+
+
+
+Install Jenkins
+https://www.jenkins.io/doc/book/installing
+
+
